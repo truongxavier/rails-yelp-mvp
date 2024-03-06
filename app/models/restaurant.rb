@@ -12,6 +12,8 @@ class Restaurant < ApplicationRecord
     reviews.each do |review|
       rating_sum += review.rating
     end
-    rating_sum.div(reviews.count)
+    if reviews.count>0
+      rating_sum.div(reviews.count)
+    end
   end
 end
