@@ -1,0 +1,12 @@
+<div class="row justify-content-center mt-4">
+    <div class="col-lg-4 bg-white rounded shadow-sm p-5">
+    <h1 class="mb-3">🗒 New review for <%= @restaurant.name %></h1>
+    <div id="todosContainer">
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.input :content %>
+        <%= f.input :rating %>
+        <%= f.submit class:'btn btn-primary'%>
+      <% end %>
+    </div>
+  </div>
+</div>
